@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario de Contacto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background-color: #f4f4f4;
+    }
+    form {
+      background-color: #fff;
+      padding: 2em;
+      border-radius: 5px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 1em;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.25em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 0.75em 1.5em;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Formulario de Contacto</h2>
+  <form action="enviar.php" method="POST">
+    <label>Nombre y apellido: <input type="text" name="name" required /></label>
+    <label>Teléfono: <input type="tel" name="tel" required /></label>
+    <label>Email: <input type="email" name="email" required /></label>
+    <label>Localidad: <input type="text" name="localidad" required /></label>
+    <label>Consulta: <textarea name="consulta" required></textarea></label>
+    <input type="submit" value="Enviar" />
+  </form>
+</body>
+</html>
